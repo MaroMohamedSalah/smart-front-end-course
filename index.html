@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="this is a demo page just for learning HTML">
+	<!-- add tab icon -->
+	<link rel="icon" href="./assets/Images/adel_shakal.jpeg" type="image/png">
+	<title>Lecture 1 - HTML Basics</title>
+</head>
+
+<body>
+	<!-- ?: Install "Better Comments" extension to add comment like this! -->
+
+	<!-- Start Header Section -->
+	<header id="intro">
+		<h1>Welcome to HTML Basics</h1>
+		<p>Understanding the structure and key elements of HTML.</p>
+		<a href="./pages/about.html">To About</a>
+		<!-- TODO: Add Your Name Here -->
+	</header>
+	<!-- End Header Section -->
+
+	<!-- Start Nested Elements -->
+	<section class="nestedElementsExample">
+		<h2>Nested Elements</h2>
+		<div>
+			<p>This is a <span style="color: red;">nested</span> paragraph.</p>
+		</div>
+	</section>
+	<!-- End Nested Elements -->
+
+	<!-- Start Links and Images -->
+	<section>
+		<h2>Links and Images</h2>
+		<a href="https://github.com" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+		<img src="./assets/Images/adel_shakal.jpeg" alt="Adall Shakal Image">
+	</section>
+	<!-- End Links and Images -->
+
+	<!-- Start Lists -->
+	<section>
+		<h2>Lists</h2>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ul>
+	</section>
+	<!-- End Lists -->
+
+	<!-- Start Advanced Examples -->
+	<section>
+		<h2>Download PDF</h2>
+		<a href="./assets/pdfs/html-and-css-book.pdf" download="name_of_the_book">Download book</a>
+
+		<h2>Download MP3</h2>
+		<a href="./assets/mp3/Amr Diab - Da Law Etsab (Audio عمرو دياب - ده لو إتساب (كلمات-87.mp3" type="audio/mp3"
+			download="amrDiab">Download Amr Diab</a>
+
+		<h2>Accessibility (ARIA)</h2>
+		<button aria-label="Close" onclick="alert('Closed!')">X</button>
+
+		<a href="#intro" title="Click on the link or press 'Alt + m' to go up" accesskey="m">Go Up</a>
+	</section>
+	<!-- End Advanced Examples -->
+</body>
+
+</html>
