@@ -4,67 +4,162 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="this is a demo page just for learning HTML">
-	<!-- add tab icon -->
-	<link rel="icon" href="./assets/Images/adel_shakal.jpeg" type="image/png">
-	<title>Lecture 1 - HTML Basics</title>
+	<title>Lecture 2 - Semantic HTML</title>
 </head>
 
 <body>
-	<!-- ?: Install "Better Comments" extension to add comment like this! -->
-
-	<!-- Start Header Section -->
-	<header id="intro">
-		<h1>Welcome to HTML Basics</h1>
-		<p>Understanding the structure and key elements of HTML.</p>
-		<a href="./pages/about.html">To About</a>
-		<!-- TODO: Add Your Name Here -->
+	<!-- Header: Page introduction -->
+	<header>
+		<h1>Understanding Semantic HTML</h1>
+		<p>Learn to structure your page meaningfully!</p>
 	</header>
-	<!-- End Header Section -->
 
-	<!-- Start Nested Elements -->
-	<section class="nestedElementsExample">
-		<h2>Nested Elements</h2>
-		<div>
-			<p>This is a <span style="color: red;">nested</span> paragraph.</p>
-		</div>
-	</section>
-	<!-- End Nested Elements -->
-
-	<!-- Start Links and Images -->
-	<section>
-		<h2>Links and Images</h2>
-		<a href="https://github.com" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
-		<img src="./assets/Images/adel_shakal.jpeg" alt="Adall Shakal Image">
-	</section>
-	<!-- End Links and Images -->
-
-	<!-- Start Lists -->
-	<section>
-		<h2>Lists</h2>
+	<!-- Navigation Bar -->
+	<nav>
 		<ul>
-			<li>Item 1</li>
-			<li>Item 2</li>
-			<li>Item 3</li>
+			<li><a href="#main-content">Main</a></li>
+			<li><a href="#articles">Articles</a></li>
+			<li><a href="#form">Form</a></li>
+			<li><a href="#footer">Footer</a></li>
 		</ul>
-	</section>
-	<!-- End Lists -->
+	</nav>
 
-	<!-- Start Advanced Examples -->
+	<!-- Main Content Focus -->
+	<main id="main-content">
+		<!-- Section: Content Grouping -->
+		<section>
+			<h2>Introduction to Semantic Tags</h2>
+			<p>Semantic elements give meaning to your content, improving accessibility and SEO.</p>
+		</section>
+
+		<section>
+			<h2>Examples</h2>
+			<!-- Independent Content (can stand alone) -->
+			<article>
+				<header>
+					<h3>What is an Article?</h3>
+
+					<!-- Time: Date or time (YYYY-MM-DD) -->
+					<time datetime="2003-4-1">April 1, 2003</time>
+				</header>
+				<p>Articles represent self-contained pieces of content. They can stand alone or be reused elsewhere.</p>
+				<footer>
+					<!-- Mark: Highlight text -->
+					<mark>Note:</mark> Use <code>&lt;article&gt;</code> for blogs, news stories, or independent
+					sections.
+				</footer>
+			</article>
+
+			<!-- Aside: side info -->
+			<aside>
+				<h3>Did You Know?</h3>
+				<p>
+					The <code>&lt;aside&gt;</code> element is used for tangentially related content, like sidebars or
+					tips.
+				</p>
+			</aside>
+		</section>
+	</main>
+
+	<!-- Figure: media and Caption -->
+	<figure>
+		<img src="./assets/images/example.jfif" alt="Semantic HTML Example">
+		<figcaption>Figure 1: Semantic HTML Example Layout</figcaption>
+	</figure>
+
+	<!-- Footer Section -->
+	<footer id="footer">
+		<p>&copy; 2024 Semantic HTML Course</p>
+	</footer>
+
+	<!-- Additional Semantic Tags -->
 	<section>
-		<h2>Download PDF</h2>
-		<a href="./assets/pdfs/html-and-css-book.pdf" download="name_of_the_book">Download book</a>
+		<h2>Additional Elements</h2>
+		<p><ins>This is inserted text.</ins></p>
+		<p><del>This text was deleted.</del></p>
+		<p>Use <sub>subscript</sub> and <sup>superscript</sup> in math or scientific notations.</p>
 
-		<h2>Download MP3</h2>
-		<a href="./assets/mp3/Amr Diab - Da Law Etsab (Audio عمرو دياب - ده لو إتساب (كلمات-87.mp3" type="audio/mp3"
-			download="amrDiab">Download Amr Diab</a>
+		<hr>
 
-		<h2>Accessibility (ARIA)</h2>
-		<button aria-label="Close" onclick="alert('Closed!')">X</button>
-
-		<a href="#intro" title="Click on the link or press 'Alt + m' to go up" accesskey="m">Go Up</a>
+		<!-- Details Expandable Content (It's great for FAQs) -->
+		<details>
+			<summary>Click to Learn More</summary>
+			<p>Semantic tags improve both the structure and accessibility of web pages.</p>
+		</details>
 	</section>
-	<!-- End Advanced Examples -->
+
+	<section id="form">
+		<h2>All Input Types Form</h2>
+		<form action="#" method="post">
+			<!-- Basic Input Types -->
+			<label for="text">Text:</label>
+			<input type="text" id="text" name="text">
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password">
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email">
+
+			<label for="number">Number:</label>
+			<input type="number" id="number" name="number" min="0" max="10">
+
+			<label for="tel">Phone:</label>
+			<input type="tel" id="tel" name="tel">
+
+			<label for="url">Website:</label>
+			<input type="url" id="url" name="url">
+
+			<!-- Date & Time -->
+			<label for="date">Date:</label>
+			<input type="date" id="date" name="date">
+
+			<label for="time">Time:</label>
+			<input type="time" id="time" name="time">
+
+			<label for="datetime-local">Date & Time:</label>
+			<input type="datetime-local" id="datetime-local" name="datetime-local">
+
+			<label for="month">Month:</label>
+			<input type="month" id="month" name="month">
+
+			<label for="week">Week:</label>
+			<input type="week" id="week" name="week">
+
+			<!-- File & Media -->
+			<label for="file">File:</label>
+			<input type="file" id="file" name="file">
+
+			<!-- Buttons -->
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset">
+
+			<!-- Selection Inputs -->
+			<label for="checkbox">Checkbox:</label>
+			<input type="checkbox" id="checkbox" name="checkbox" value="1">
+
+			<label for="radio">Radio:</label>
+			<input type="radio" id="radio" name="radio" value="option1"> Option 1
+			<input type="radio" id="radio" name="radio" value="option2"> Option 2
+
+			<label for="range">Range:</label>
+			<input type="range" id="range" name="range" min="0" max="100">
+
+			<!-- Specialized Inputs -->
+			<label for="color">Color:</label>
+			<input type="color" id="color" name="color">
+
+			<label for="search">Search:</label>
+			<input type="search" id="search" name="search">
+
+			<!-- Accessible Inputs -->
+			<label for="custom-pattern">ZIP Code (5 digits):</label>
+			<input type="text" id="custom-pattern" name="custom-pattern" pattern="[0-9]{5}"
+				title="Enter a 5-digit ZIP code">
+
+			<button type="submit">Submit</button>
+		</form>
+	</section>
 </body>
 
 </html>
